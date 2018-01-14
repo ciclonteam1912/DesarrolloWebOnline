@@ -22,21 +22,6 @@ body {
 }
 
 .guitarra {
-	overflow: hidden;
-	/*La propiedad overflow especifica qué sucede si el contenido se desborda del cuadro de un elemento.
-	Esta propiedad especifica si se debe recortar contenido o agregar barras de desplazamiento cuando 
-	el contenido de un elemento es demasiado grande para caber en un área específica.
-
-	Nota: La propiedad overflow solo funciona para elementos de bloque con una altura especificada.
-
-	Valores de propiedad:
-	
-	visible: El desbordamiento no está recortado. Se renderiza fuera del cuadro del elemento. Esto es predeterminado.
-	hidden: El desbordamiento se recorta y el resto del contenido será invisible.
-	scroll: El desbordamiento se recorta, pero se agrega una barra de desplazamiento para ver el resto del contenido.
-	auto: Si se recorta el desbordamiento, se debe agregar una barra de desplazamiento para ver el resto del contenido.
-	initial: Establece esta propiedad a su valor predeterminado.
-	inherit: Hereda esta propiedad de su elemento principal.*/
 	border: 1px solid #1f313c;
 	margin: 10px;
 	padding: 10px;
@@ -69,6 +54,8 @@ body {
 .menu {
 	display: inline-block;
 	font-size: 24px;
+	position: absolute;
+	right: 0;
 }
 
 .menu li{
@@ -87,10 +74,14 @@ body {
 
 .derecha {
 	float: right;
+	position: relative;
+	top: -143px;
 }
 
 .izquierda {
 	float: left;
+	position: relative;
+	top: 80px;
 }
 
 .contenedor-guitarra-a {
@@ -99,4 +90,28 @@ body {
 
 .contenedor-guitarra-b {
 	margin-left: 370px; 
+}
+
+.header {
+	position: relative;
+	/*Tipos de positions
+
+	Sirven para ubicar elementos, pueden recibir las propiedades top, bottom, left y right. 
+	Estas propiedades pueden recibir px, %(porcentajes), y demás valores. Algunos de los positions más comunes son
+
+	Position: absolute = ubica a los elementos sin tener en cuenta los demás elementos 
+	(no le importa los demás elementos, le da igual ponerse encima de otros elementos). 
+	para ubicarlo (darle cordenadas como left por ejemplo) este se empieza a ubicar a partir su elemento padre 
+	que tenga position relative y de no tener un padre con position relative se ubica partir del body.
+
+	Position: Fixed = mantiene fijos a los elementos en un lugar fijo en la pagina sin importar que se haga scroll. 
+	Es usado normalmentem para fijar esos header que se mantienen fijos al bajar en la pagina.
+
+	Position: Relative = permite que un elemento se desplace respecto a lo que hubiera sido su posición normal; 
+	el resto de elementos continúan en su posición ignorando al que se desplaza, lo que quiere decir que si 
+	movemos un elemento no se afectan a los demás.
+
+	Obs:
+	Si un elemento tiene position: absolute o fixed y tambien la propiedad float, esta última no hará nada y 
+	se respetaran los valores agregados al position.*/
 }
