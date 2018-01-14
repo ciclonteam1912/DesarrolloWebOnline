@@ -103,24 +103,21 @@ button {
 
 .header {
 	position: relative;
-	/*Tipos de positions
+}
 
-	Sirven para ubicar elementos, pueden recibir las propiedades top, bottom, left y right. 
-	Estas propiedades pueden recibir px, %(porcentajes), y demás valores. Algunos de los positions más comunes son
+.footer {
+	background: #273b47;
+}
 
-	Position: absolute = ubica a los elementos sin tener en cuenta los demás elementos 
-	(no le importa los demás elementos, le da igual ponerse encima de otros elementos). 
-	para ubicarlo (darle cordenadas como left por ejemplo) este se empieza a ubicar a partir su elemento padre 
-	que tenga position relative y de no tener un padre con position relative se ubica partir del body.
+.contacto img {
+	display: block;
+}
 
-	Position: Fixed = mantiene fijos a los elementos en un lugar fijo en la pagina sin importar que se haga scroll. 
-	Es usado normalmentem para fijar esos header que se mantienen fijos al bajar en la pagina.
+.contacto strong {
+	display: block;
+}
 
-	Position: Relative = permite que un elemento se desplace respecto a lo que hubiera sido su posición normal; 
-	el resto de elementos continúan en su posición ignorando al que se desplaza, lo que quiere decir que si 
-	movemos un elemento no se afectan a los demás.
-
-	Obs:
-	Si un elemento tiene position: absolute o fixed y tambien la propiedad float, esta última no hará nada y 
-	se respetaran los valores agregados al position.*/
+.contacto a {
+	color: white;
+	text-decoration: none;
 }
