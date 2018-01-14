@@ -21,8 +21,34 @@ body {
 	margin-bottom: 20px;
 }
 
+.guitarra {
+	overflow: hidden;
+	/*La propiedad overflow especifica qué sucede si el contenido se desborda del cuadro de un elemento.
+	Esta propiedad especifica si se debe recortar contenido o agregar barras de desplazamiento cuando 
+	el contenido de un elemento es demasiado grande para caber en un área específica.
+
+	Nota: La propiedad overflow solo funciona para elementos de bloque con una altura especificada.
+
+	Valores de propiedad:
+	
+	visible: El desbordamiento no está recortado. Se renderiza fuera del cuadro del elemento. Esto es predeterminado.
+	hidden: El desbordamiento se recorta y el resto del contenido será invisible.
+	scroll: El desbordamiento se recorta, pero se agrega una barra de desplazamiento para ver el resto del contenido.
+	auto: Si se recorta el desbordamiento, se debe agregar una barra de desplazamiento para ver el resto del contenido.
+	initial: Establece esta propiedad a su valor predeterminado.
+	inherit: Hereda esta propiedad de su elemento principal.*/
+	border: 1px solid #1f313c;
+	margin: 10px;
+	padding: 10px;
+}
+
 .guitarras {
 	color: #1f313c;
+}
+
+.guitarras ol {
+	margin: 0;
+	padding: 0;
 }
 
 .guitarras h1 {
@@ -57,4 +83,20 @@ body {
 .contenedor {
 	width: 800px;
 	margin: auto;
+}
+
+.derecha {
+	float: right;
+}
+
+.izquierda {
+	float: left;
+}
+
+.contenedor-guitarra-a {
+	padding-left: 20px;
+}
+
+.contenedor-guitarra-b {
+	margin-left: 370px; 
 }
