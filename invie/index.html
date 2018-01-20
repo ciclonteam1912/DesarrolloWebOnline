@@ -29,7 +29,7 @@
 			<div class="contenedor"><!--  En este caso la imagen está asignada como background y por defecto esta intentará ocupar 							todo el campo disponible de su contenedor -->
 				<h1 class="titulo">Guitarras inviesibles</h1> <!-- titulo --> 
 				<h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3><!-- resumen -->
-				<button>Conoce más</button> <!-- boton -->
+				<button class="button">Conoce más</button> <!-- boton -->
 			</div>			
 		</section>
 		<section id="guitarras" class="guitarras contenedor"> <!-- guitarras -->
@@ -73,36 +73,38 @@
 					<a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>contacto@invie.com</span></a>
 				</div>	
 				<form class="formulario">
-					<label for="nombre">Nombre</label>
-					<input type="text" id="nombre" name="nombre" required/>
-					<label for="email">E-mail</label>
-					<input type="email" id="email" name="email" required />
-					<div class="sexo">
-						<label for="mujer">
-							<input type="radio" id="mujer" name="sexo" value="mujer" /> mujer											
-						</label>
-						<label for="hombre">
-							<input type="radio" id="hombre" name="sexo" value="hombre" /> hombre											
-						</label>
-					</div>	
-					<div class="intereses">
-						<label for="cotizacion">
-							<input type="checkbox" id="cotizacion" name="intereses" value="cotizacion" />Cotización							
-						</label>
-						<label for="reclamos">
-							<input type="checkbox" id="reclamos" name="intereses" value="reclamos" />Reclamos							
-						</label>
-						<label for="comentarios">
-							<input type="checkbox" id="comentarios" name="intereses" value="comentarios" />Comentarios							
-						</label>
-						<label for="otros">
-							<input type="checkbox" id="otros" name="intereses" value="otros" />Otros							
-						</label>
-					</div>			
-					<div>
+					<div class="col1">
+						<label for="nombre">Nombre</label>
+						<input type="text" id="nombre" name="nombre" required/>
+						<label for="email">E-mail</label>
+						<input type="email" id="email" name="email" required />
+						<div class="sexo">
+							<label for="mujer">
+								<input type="radio" id="mujer" name="sexo" value="mujer" checked /> mujer											
+							</label>
+							<label for="hombre">
+								<input type="radio" id="hombre" name="sexo" value="hombre" /> hombre											
+							</label>
+						</div>	
+						<div class="intereses">
+							<label for="cotizacion">
+								<input type="checkbox" id="cotizacion" name="intereses" value="cotizacion" checked />Cotización							
+							</label>
+							<label for="reclamos">
+								<input type="checkbox" id="reclamos" name="intereses" value="reclamos" />Reclamos							
+							</label>
+							<label for="comentarios">
+								<input type="checkbox" id="comentarios" name="intereses" value="comentarios" />Comentarios							
+							</label>
+							<label for="otros">
+								<input type="checkbox" id="otros" name="intereses" value="otros" />Otros							
+							</label>
+						</div>	
+					</div>						
+					<div class="col2">
 						<label for="asunto">Asunto</label>
 						<textarea name="asunto" id="asunto" cols="30" rows="7"></textarea>
-						<input type="submit" value="Enviar" />
+						<input type="submit" value="Enviar" class="button" />
 					</div>	
 				</form>			
 			</div>
