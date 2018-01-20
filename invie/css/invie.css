@@ -166,7 +166,24 @@ body {
 .sexo {
 	margin-top: 10px;
 }
-/*Obs:
 
-  Para utlizar un alineado vertical 'align-item: center' dentro de un layout vertical 'flex-direction: column'
-  se debe utilizar 'justify-content: center' y no 'align-item: center'*/
+/********precios****************/
+table {
+	width: 100%;	
+}
+
+th {
+	background: #273b47;
+	color: white;
+	padding: 10px 20px;
+	text-align: left;
+}
+
+td {
+	padding: 20px;
+}
+
+table, td {
+	border: 1px solid #273b47;
+	border-collapse: collapse;
+}
