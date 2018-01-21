@@ -1,0 +1,85 @@
+/* Propiedades que se le puede agregar a las transiciones
+background-color
+background-position
+background-size
+border-color
+border-width
+color
+border-radius
+font-size
+font-weight
+height width
+left right bottom top
+padding
+opacity
+*/
+body {
+  background: skyblue;
+}
+.contenedor {
+  margin: 0 auto;
+  width: 600px;
+  font-family: sans-serif;
+}
+
+.transicion {
+  /*duracion aceleracion propiedad*/
+  transition: .3s; /*con esto la transicion se aplica a todas las propiedades con la aceleración por defecto ease*/
+  /*transition: .3s opacity ease;*/
+  /*transition-duration: .3s; duracion de la transicion --> .3s = 300ms*/
+  /*transition-property: opacity; propiedad*/
+ /* transition-timing-function: ease; aceleracion*/
+}
+
+.caja {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.opacity:hover {
+  opacity: 1;
+}
+
+.fuente:hover {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.colores:hover {
+  color: red;
+  background: yellow;
+}
+
+/*Las transformaciones no afectan a los elementos hermanos*/
+
+.rotacion:hover {
+  transform: rotate(360deg); /*deben ser en grados y no en pixels*/
+}
+
+.escala:hover {
+  transform: scale(2); /*valores de (0 - 1), 2 equivale al 200% del tamaño del elemento. El valor por defecto es 1 */
+}
+
+.sesgado:hover {
+  transform: skew(45deg);
+}
+
+.traslacion:hover {
+  transform: translateZ(50px); /*la traslaciones pueden tener un eje Y, X o Z*/
+}
+
+/*Para que la traslacion en el eje Z de un elemento funcione debe haber una perspectiva en su contenedor*/
+
+body {
+  perspective: 1000px;
+}
+
+
+.mixtas:hover {
+  transform: rotate(45deg) scale(2) skew(45deg) translateX(50px);
+}
