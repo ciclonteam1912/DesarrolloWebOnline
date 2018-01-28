@@ -1,0 +1,241 @@
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	color: #515151;
+}
+
+a {
+	color: #515151;	
+}
+/*Formas de colocar el menu (nav) a la derecha del logotipo en el header*/
+
+/****Con position: absolute;****
+	nav {
+		background: purple;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+*/
+
+/****Con float: right;****
+	nav {
+		background: purple;
+		float: right;
+}
+*/
+
+/****Con display: flex; en la etiqueta padre (header)
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+*/
+/*********************************************************/
+
+header {
+	background: #1c3643;
+	height: 50px;
+	padding: 0 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center; /*Para que los hijos estén centrados verticalmente*/
+	margin-bottom: 20px;
+}
+
+
+/*Formas de colocar los li de un ul uno a lado del otro*/
+
+/****Con display: inline-block;
+	ul li {
+		display: inline-block;
+	}	
+*/
+
+/****Con display: flex; en la etiqueta padre (ul)
+	nav ul {
+		display: flex;
+	}
+*/
+/**************************************************************/
+.header-right {
+	height: inherit;
+	display: flex;
+	align-items: center;
+}
+
+.header-right .button {
+	margin-left: 10px;
+}
+
+nav {
+	height: inherit;/*Con esto hereda el alto de su padre (header)*/
+}
+
+nav ul {
+	margin: 0;
+	display: flex;
+	height: inherit;
+}
+
+nav li {
+	list-style: none; /*Para sacar las bolitas o cualquier estilo de los li*/
+	color: white;
+	height: inherit;
+	display: flex; /*Se aplica el display: flex por que la misma ptopiedad fue aplicada al (nav a) y esto hace que desaparesca
+	el estilo aplicado al (nav li:after)*/
+	align-items: center;
+}
+
+nav li:after {
+	content: "|";
+	display: inline-block;
+}
+
+nav li:last-child:after {
+	display: none;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	height: inherit; /*Con esto los a no heredan el ancho de su padre por que son elementos en linea. Deben ser elementos en bloque*/
+	/*display: block;*/
+	display: flex;
+	align-items: center;
+	/*border-top: 5px solid transparent; Con esto al hacer hover no modifica el comportamiento de la caja*/
+	padding: 0 10px;
+}
+
+nav a:hover {
+	/*border-top: 5px solid red;*/
+	/*box-shadow: donde se ubica la sombra, x, y, difuminado, color*/
+	box-shadow: inset 0px 5px 0px red !important; 
+}
+
+nav a.is-active {
+	box-shadow: inset 0px 5px 0px green; 	
+}
+
+.button {
+	background: gray;
+	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, .3); 	
+	/*border-bottom: 5px solid black;*/
+	font-size: 14px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: white;
+	transition: .2s;
+	padding: 5px 10px 10px;
+}
+
+.button:active {
+	transform: scale(.9);
+}
+
+.button.red {
+	background: #ff4842;
+}
+
+/**********************PORTADA***************************************/
+h1 {
+	margin: 0;
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+
+.blog {
+	width: 1000px;
+	margin: 0 auto; /*Esta es la forma de centrar elementos con display: block y que tienen un tamaño de ancho definido*/
+}
+
+.portada {
+	/*border: 10px solid red;*/
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.portada .description {
+	background: rgba(255, 255, 255, .5); /*Esto es lo mismo que poner background: #ffffff; opacity: .5*/
+	position: absolute;
+	bottom: 30px; /*En este caso se coloca en la parte de abajo de la pantalla osea del viewport (área visible). 
+	Entonces para ello se coloca position: relative al priemr padre de este elemento*/
+	left: 20px;
+	padding: 20px;
+}
+
+/*******************ITEMS**********************************************/
+.blog-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.blog-items h3 {
+	font-weight: 600;
+	margin: 10px 0 15px;
+}
+
+.item-blog {
+	width: 300px;
+}
+
+.item-blog .description { 
+	margin-bottom: 15px;
+}
+
+/***************************PAGINADOR****************************************/
+.paginador {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.paginador ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-left: 10px;
+}
+
+.paginador li {
+	background: #eaeaea;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid gray;
+	margin: 0 5px;
+}
+
+.paginador li.selected {
+	border-color: transparent;
+	background: white;
+}
+
+.paginador a {
+	text-decoration: none;
+	display: block;
+	height: inherit;
+	padding: 0 10px;
+}
+
+.autor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 13px;
+	border-top: 1px solid gray;
+	padding-top: 15px;
+}
+
+.autor img {
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.autor p {
+	margin: 0;
+}
