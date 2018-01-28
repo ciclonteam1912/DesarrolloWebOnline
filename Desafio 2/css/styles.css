@@ -1,0 +1,42 @@
+body {
+	background: lightgray;
+	margin: 0;
+	min-height: 100vh; /*vh significa el alto visible de la pantalla del navegador*/
+	/*Para que funcione el sticky footer con display: flex es necesario ponerle un alto al elemento padre de todo. 
+	En este caso es body, y sus hijos son header, section y footer.*/
+	display: flex;
+	flex-direction: column;
+}
+
+h2, p {
+	margin: 0;
+}
+
+header {
+	background: #273b47;
+}
+
+section {
+	background: #fcfcd2;
+	/*min-height: 450px; /*De esta forma funcionaría pero no de manera dinámica.*/
+	flex: 1;
+}
+
+/*Formas de poner el footer siempre hacia abajo*/
+
+footer {
+	background: #7fc719;
+
+	/*Una forma sería con position: absolute, pero a medida que haya más contenido no funcionaría correctamente, ya que el footer se posicionaría
+	por encima del contenido.
+	position: absolute; 
+	*/
+
+	/*Otra forma sería con position fixed.
+	position: fixed;
+	bottom: 0;
+	left: 0; Sería lo mismo que poner width: 100%
+	right: 0;
+	*/
+}
+
