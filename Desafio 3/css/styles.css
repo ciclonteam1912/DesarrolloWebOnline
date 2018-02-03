@@ -1,0 +1,90 @@
+body {
+	background: lightblue;
+	margin: 0;
+}
+
+.cvander-land {
+	width: 1024px;
+	height: 243px;
+	background-image: url('../images/bg-wrapper.png');
+	/*background-position: center bottom;
+	background-repeat: no-repeat;*/
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.container {
+	height: 100vh;
+	width: 100vw;
+}
+
+.cvander {
+	width: 166px;
+	height: 171px;
+	/*background: red;*/
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	transition: .3s;
+}
+
+.cvander:hover {
+	/*background: blue;*/
+}
+
+.cvander:hover .cvander-head {
+	/*border: 10px solid red;*/
+	/*animation: tiempo nombre-animacion */
+	animation:.5s cvander infinite;
+}
+
+.cvander:hover .cvander-ipad {
+	transform: rotate(-7deg);
+}
+
+.cvander-body {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.cvander-head {
+	position: absolute;
+	left: 0;
+	/*transition: .3s;*/
+}
+
+.cvander-ipad {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	transition: .2s;
+}
+
+@keyframes cvander {
+	/*0% -100%*/
+	/*from to*/
+	/*from {
+		border: 1px solid red;
+	}
+
+	to{		
+		transform: translateY(5px);
+	}*/
+
+	/*0%{
+
+	}*/
+
+	50%{
+		transform: translateY(5px) rotate(2deg);
+	}
+
+	100%{
+		transform: translateY(0px);
+	}
+}
