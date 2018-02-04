@@ -1,0 +1,106 @@
+body {
+	background: #1d3557;
+	color: #f1faee;
+	font-family: Arial;
+	margin: 0;
+	/*padding-bottom: 200px;*/
+}
+
+.caja {
+	width: 200px;
+	border: 1px solid #abdadc;
+	margin-bottom: 50px;
+}
+
+/*Ya que tenemos un tamaño determinado de la caja y un display: block*/
+.tipo-a {
+	margin: 0 auto; 
+}
+
+/*Usando calc()*/
+.tipo-b {
+	margin-left: calc(100vw / 2  - 100px); 
+}
+
+/*Centrado horizontal con display: inline-block*/
+.tipo-c {
+	border: 1px solid #457b9d;
+	padding: 10px;
+	text-align: center;
+}
+
+.tipo-c .caja {
+	display: inline-block;
+	text-align: left;
+}
+
+.relative {
+	position: relative;
+	border: 1px solid #457b9d;
+	height: 400px;
+}
+
+/*Centrado horizontal con position absolute y margin: 0 auto*/
+.tipo-d {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+/*Centrado horizontal con position absolute y porcentajes*/
+.tipo-e {
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+}
+
+
+/*Centrado horizontal con flex*/
+.tipo-f {
+	display: flex;
+	justify-content: center;
+}
+
+/*************Alineaciones verticales***********************/
+/*Centrado vertical con display table*/
+.tipo-g {
+	display: table;
+	width: 100%;
+	height: 500px;
+}
+
+.tipo-g .caja {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100px;
+}
+
+.heigth {
+	height: 500px;
+	background: #e63946;
+}
+
+/*Centrado vertical con padding.*/
+.tipo-h {
+	padding-top: 150px;
+	box-sizing: border-box;
+}
+
+/*Centrado vertical con flex*/
+.tipo-i {
+	display: flex;
+	align-items: center;
+}
+
+/*Centrado vertical con line-heigth, con elementos de una sola línea*/
+.tipo-j {
+	line-height: 500px;
+}
+
+
+/*Centrado de contenidos mixtos*/
+.tipo-k > * {
+	display: inline;
+	vertical-align: middle;
+}
